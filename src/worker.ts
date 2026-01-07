@@ -1,6 +1,6 @@
 import { Worker } from "bullmq";
 
-const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const worker = new Worker(
     "email-queue",
