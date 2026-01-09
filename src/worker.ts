@@ -18,6 +18,8 @@ const worker = new Worker(
             host: "127.0.0.1",
             port: 6379,
         },
+        // now it can handle 5 jobs at a same time (concurrently)
+        concurrency: 5,
     },
 );
 
