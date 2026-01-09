@@ -17,7 +17,7 @@ async function addJob() {
     const userId = 1;
     const date = new Date().toISOString().split("T")[0];
 
-    const uniqueJobId = `send-digest-${userId}-${date}`;
+    const uniqueJobId = `digest-user${userId}-${date}`;
 
     const job = await emailQueue.add(
         "daily-digest",
